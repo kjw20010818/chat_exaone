@@ -74,6 +74,7 @@ pip install torch transformers bitsandbytes gradio
 
 ⚠️ GPU 환경 (예: A100)에서 실행 권장
 
+
 #### ▶️ Usage
 ##### 1. 서버 실행
     python chat_exaone.py
