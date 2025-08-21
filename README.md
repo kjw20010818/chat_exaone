@@ -11,6 +11,7 @@
 ![CUDA](https://img.shields.io/badge/CUDA-12.1-76B900?logo=nvidia&logoColor=white)
 
 ![glibc](https://img.shields.io/badge/glibc-2.29-blue)
+
 ------------------------
 
 #### 이 프로젝트는 EXAONE-4.0-32B 모델을 Hugging Face transformers 라이브러리를 사용해 불러오고,
