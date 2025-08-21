@@ -79,7 +79,7 @@ pip install torch transformers bitsandbytes gradio
     demo = gr.ChatInterface(fn=chat_fn)
     demo.launch(server_name="0.0.0.0", server_port=7860)
 
-##⚖️ Notes
+## ⚖️ Notes
 ---------
 ###### 양자화(Quantization)
 
