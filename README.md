@@ -1,7 +1,7 @@
 # EXAONE-4.0-32B Chatbot
 ------------------------
 
-####이 프로젝트는 EXAONE-4.0-32B 언어모델을 Hugging Face transformers 라이브러리를 통해 불러오고,
+이 프로젝트는 EXAONE-4.0-32B 언어모델을 Hugging Face transformers 라이브러리를 통해 불러오고,
 Gradio 웹 인터페이스로 간단하게 대화할 수 있도록 만든 예제입니다.
 
 🚀 Features
