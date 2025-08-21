@@ -55,21 +55,21 @@ max_new_tokens: 답변 최대 길이 설정
 ## 📦 Installation
 -------------------
 ##### 1. Conda 환경 생성
-conda create -n exaone python=3.10 -y
-conda activate exaone
+    conda create -n exaone python=3.10 -y
+    conda activate exaone
 
 ##### 2. PyTorch 설치 (CUDA 12.1)
-pip install torch==2.1.2+cu121 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
+    pip install torch==2.1.2+cu121 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
 
 ##### 3. Transformers, Accelerate, BitsAndBytes 설치
-pip install transformers==4.44.0 accelerate==0.34.0 bitsandbytes gradio
+    pip install transformers==4.44.0 accelerate==0.34.0 bitsandbytes gradio
 
 ##### 4. 모델 다운로드
-git lfs install
-git clone https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B ./exaone_model
+    git lfs install
+    git clone https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B ./exaone_model
 
 ##### 5. bitsandbytes gradio 패키지 설치
-pip install torch transformers bitsandbytes gradio
+    pip install torch transformers bitsandbytes gradio
 
 ⚠️ GPU 환경 (예: A100)에서 실행 권장
 
