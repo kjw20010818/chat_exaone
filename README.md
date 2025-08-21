@@ -13,8 +13,6 @@
 
 ![glibc](https://img.shields.io/badge/glibc-2.29-blue)
 
-------------------------
-
 #### 이 프로젝트는 EXAONE-4.0-32B 모델을 Hugging Face transformers 라이브러리를 사용해 불러오고,
 #### 양자화(8bit/4bit) 를 적용하여 GPU 메모리를 효율적으로 활용하면서 대화할 수 있도록 구현된 예제입니다.
 
