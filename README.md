@@ -53,7 +53,7 @@ pip install torch transformers bitsandbytes gradio
     )
 
 ###### 채팅 함수
-def chat_fn(message, history):
+    def chat_fn(message, history):
     chat_history.append({"role": "user", "content": message})
 
     prompt = tokenizer.apply_chat_template(chat_history, tokenize=False, add_generation_prompt=True)
