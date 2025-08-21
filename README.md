@@ -53,29 +53,29 @@ pip install torch transformers bitsandbytes gradio
     )
 
 채팅 함수
-    def chat_fn(message, history):
-        chat_history.append({"role": "user", "content": message})
+def chat_fn(message, history):
+    chat_history.append({"role": "user", "content": message})
 
-        prompt = tokenizer.apply_chat_template(chat_history, tokenize=False, add_generation_prompt=True)
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    prompt = tokenizer.apply_chat_template(chat_history, tokenize=False, add_generation_prompt=True)
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
 
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=512,
-            do_sample=True,
-            temperature=0.7,
-            top_p=0.9
-        )
+    outputs = model.generate(
+       **inputs,
+       max_new_tokens=512,
+       do_sample=True,
+       temperature=0.7,
+       top_p=0.9
+    )
 
-        reply = tokenizer.decode(outputs[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True).strip()
-        chat_history.append({"role": "assistant", "content": reply})
-        return reply
+    reply = tokenizer.decode(outputs[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True).strip()
+    chat_history.append({"role": "assistant", "content": reply})
+    return reply
 
-        Gradio UI
-        import gradio as gr
+    Gradio UI
+    import gradio as gr
 
-        demo = gr.ChatInterface(fn=chat_fn)
-        demo.launch(server_name="0.0.0.0", server_port=7860)
+    demo = gr.ChatInterface(fn=chat_fn)
+    demo.launch(server_name="0.0.0.0", server_port=7860)
 
 ##⚖️ Notes
 ---------
