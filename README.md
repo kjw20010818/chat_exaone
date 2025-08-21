@@ -1,11 +1,24 @@
-# EXAONE-4.0-32B Chatbot
+# ![Python](https://img.shields.io/badge/Python-3.10-blue) EXAONE-4.0-32B Chatbot (HuggingFace 포맷)
+> Hugging Face Transformers + Gradio로 만든 대화형 LLM
 ------------------------
 
-#### 이 프로젝트는 EXAONE-4.0-32B 언어모델을 Hugging Face transformers 라이브러리를 통해 불러오고,
-Gradio 웹 인터페이스로 간단하게 대화할 수 있도록 만든 예제입니다.
+#### 이 프로젝트는 EXAONE-4.0-32B 모델을 Hugging Face transformers 라이브러리를 사용해 불러오고,
+#### 양자화(8bit/4bit) 를 적용하여 GPU 메모리를 효율적으로 활용하면서 대화할 수 있도록 구현된 예제입니다.
+
+## ✅ Requirements
+---------------------
+OS: Ubuntu 18.04
+
+GPU: NVIDIA A100 (80GB 기준, 다른 GPU 가능)
+
+Python: 3.10 (Anaconda 권장)
+
+CUDA: 12.1
+
+glibc: 2.29 이상 (PyTorch 호환 문제로 업그레이드 필요)
 
 ## 🚀 Features
-
+---------------
 대형 언어모델(EXAONE 32B) 지원
 
 양자화(8bit/4bit) 옵션으로 GPU 메모리 절약
@@ -22,10 +35,23 @@ top_p: 확률적 샘플링
 
 max_new_tokens: 답변 최대 길이 설정
 
-============================================================================================
-
 ## 📦 Installation
-1. 패키지 설치
+-------------------
+##### 1. Conda 환경 생성
+conda create -n exaone python=3.10 -y
+conda activate exaone
+
+##### 2. PyTorch 설치 (CUDA 12.1)
+pip install torch==2.1.2+cu121 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
+
+##### 3. Transformers, Accelerate, BitsAndBytes 설치
+pip install transformers==4.44.0 accelerate==0.34.0 bitsandbytes gradio
+
+##### 4. 모델 다운로드
+git lfs install
+git clone https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B ./exaone_model
+
+##### 5. bitsandbytes gradio 패키지 설치
 pip install torch transformers bitsandbytes gradio
 
 
