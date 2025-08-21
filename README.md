@@ -1,12 +1,5 @@
 # EXAONE-4.0-32B Chatbot (HuggingFace 포맷)
 > Hugging Face Transformers + Gradio로 만든 대화형 LLM
-------------------------
-
-#### 이 프로젝트는 EXAONE-4.0-32B 모델을 Hugging Face transformers 라이브러리를 사용해 불러오고,
-#### 양자화(8bit/4bit) 를 적용하여 GPU 메모리를 효율적으로 활용하면서 대화할 수 있도록 구현된 예제입니다.
-
-## ✅ Requirements
----------------------
 ![Anaconda](https://img.shields.io/badge/Anaconda-2023.09-44A833?logo=anaconda&logoColor=white)
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-18.04-E95420?logo=ubuntu&logoColor=white)
@@ -18,6 +11,30 @@
 ![CUDA](https://img.shields.io/badge/CUDA-12.1-76B900?logo=nvidia&logoColor=white)
 
 ![glibc](https://img.shields.io/badge/glibc-2.29-blue)
+------------------------
+
+#### 이 프로젝트는 EXAONE-4.0-32B 모델을 Hugging Face transformers 라이브러리를 사용해 불러오고,
+#### 양자화(8bit/4bit) 를 적용하여 GPU 메모리를 효율적으로 활용하면서 대화할 수 있도록 구현된 예제입니다.
+
+## ✅ Requirements
+---------------------
+OS: Ubuntu 18.04
+
+Python: 3.10 (conda env)
+
+GPU: NVIDIA A100(80GB)
+
+CUDA: 12.1
+
+glibc: 2.29
+
+PyTorch: 2.1.2+cu121
+
+Transformers: 4.44.0
+
+BitsAndBytes: 최신 버전
+
+모델: EXAONE-4.0-32B (8bit 또는 4bit 양자화로 실행)
 
 ## 🚀 Features
 ---------------
