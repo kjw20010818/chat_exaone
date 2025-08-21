@@ -71,9 +71,7 @@ git clone https://huggingface.co/LGAI-EXAONE/EXAONE-4.0-32B ./exaone_model
 ##### 5. bitsandbytes gradio 패키지 설치
 pip install torch transformers bitsandbytes gradio
 
-
 ⚠️ GPU 환경 (예: A100)에서 실행 권장
-
 
 #### ▶️ Usage
 ##### 1. 서버 실행
