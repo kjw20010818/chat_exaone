@@ -7,15 +7,17 @@
 
 ## ✅ Requirements
 ---------------------
-OS: ![Ubuntu](https://img.shields.io/badge/Ubuntu-18.04-E95420?logo=ubuntu&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-2023.09-44A833?logo=anaconda&logoColor=white)
 
-GPU: ![NVIDIA](https://img.shields.io/badge/NVIDIA-A100-76B900?logo=nvidia&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-18.04-E95420?logo=ubuntu&logoColor=white)
 
-Python: ![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white) (Anaconda 권장)
+![NVIDIA](https://img.shields.io/badge/NVIDIA-A100-76B900?logo=nvidia&logoColor=white)
 
-CUDA: ![CUDA](https://img.shields.io/badge/CUDA-12.1-76B900?logo=nvidia&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
 
-glibc: ![glibc](https://img.shields.io/badge/glibc-2.29-blue)
+![CUDA](https://img.shields.io/badge/CUDA-12.1-76B900?logo=nvidia&logoColor=white)
+
+![glibc](https://img.shields.io/badge/glibc-2.29-blue)
 
 ## 🚀 Features
 ---------------
