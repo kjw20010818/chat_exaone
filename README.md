@@ -34,7 +34,7 @@ Transformers: 4.44.0
 
 BitsAndBytes: 최신 버전
 
-모델: EXAONE-4.0-32B (8bit 또는 4bit 양자화로 실행)
+Model: EXAONE-4.0-32B (8bit 또는 4bit 양자화로 실행)
 
 ## 🚀 Features
 ---------------
