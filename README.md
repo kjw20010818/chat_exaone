@@ -1,4 +1,4 @@
-# ![Python](https://img.shields.io/badge/Python-3.10-blue) EXAONE-4.0-32B Chatbot (HuggingFace 포맷)
+# EXAONE-4.0-32B Chatbot (HuggingFace 포맷)
 > Hugging Face Transformers + Gradio로 만든 대화형 LLM
 ------------------------
 
@@ -7,15 +7,15 @@
 
 ## ✅ Requirements
 ---------------------
-OS: Ubuntu 18.04
+OS: ![Ubuntu](https://img.shields.io/badge/Ubuntu-18.04-E95420?logo=ubuntu&logoColor=white) Ubuntu 18.04
 
-GPU: NVIDIA A100 (80GB 기준, 다른 GPU 가능)
+GPU: ![NVIDIA](https://img.shields.io/badge/NVIDIA-A100-76B900?logo=nvidia&logoColor=white) NVIDIA A100 (80GB 기준, 다른 GPU 가능)
 
-Python: 3.10 (Anaconda 권장)
+Python: ![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white) 3.10 (Anaconda 권장)
 
-CUDA: 12.1
+CUDA: ![CUDA](https://img.shields.io/badge/CUDA-12.1-76B900?logo=nvidia&logoColor=white) 12.1
 
-glibc: 2.29 이상 (PyTorch 호환 문제로 업그레이드 필요)
+glibc: ![glibc](https://img.shields.io/badge/glibc-2.29-blue) 2.29 이상 (PyTorch 호환 문제로 업그레이드 필요)
 
 ## 🚀 Features
 ---------------
