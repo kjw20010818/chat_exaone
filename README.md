@@ -71,11 +71,11 @@ pip install torch transformers bitsandbytes gradio
         chat_history.append({"role": "assistant", "content": reply})
         return reply
 
-    Gradio UI
-    import gradio as gr
+        Gradio UI
+        import gradio as gr
 
-    demo = gr.ChatInterface(fn=chat_fn)
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+        demo = gr.ChatInterface(fn=chat_fn)
+        demo.launch(server_name="0.0.0.0", server_port=7860)
 
 ##⚖️ Notes
 ---------
