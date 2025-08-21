@@ -1,10 +1,10 @@
 # EXAONE-4.0-32B Chatbot
 ------------------------
 
-이 프로젝트는 EXAONE-4.0-32B 언어모델을 Hugging Face transformers 라이브러리를 통해 불러오고,
+#### 이 프로젝트는 EXAONE-4.0-32B 언어모델을 Hugging Face transformers 라이브러리를 통해 불러오고,
 Gradio 웹 인터페이스로 간단하게 대화할 수 있도록 만든 예제입니다.
 
-🚀 Features
+##### 🚀 Features
 
 대형 언어모델(EXAONE 32B) 지원
 
@@ -29,15 +29,15 @@ pip install torch transformers bitsandbytes gradio
 
 ⚠️ GPU 환경 (예: A100)에서 실행 권장
 
-▶️ Usage
-1. 서버 실행
+##### ▶️ Usage
+###### 1. 서버 실행
     python chat_exaone.py
 
-2. 웹 브라우저 접속
+##### 2. 웹 브라우저 접속
     http://localhost:7860
 
-💻 Code Overview
-모델 불러오기
+##### 💻 Code Overview
+###### 모델 불러오기
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
     model_id = "LGAI-EXAONE/EXAONE-4.0-32B"
@@ -52,7 +52,7 @@ pip install torch transformers bitsandbytes gradio
         quantization_config=bnb_config
     )
 
-채팅 함수
+###### 채팅 함수
 def chat_fn(message, history):
     chat_history.append({"role": "user", "content": message})
 
@@ -79,7 +79,7 @@ def chat_fn(message, history):
 
 ##⚖️ Notes
 ---------
-양자화(Quantization)
+###### 양자화(Quantization)
 
 load_in_8bit=True: 메모리 절약 + 속도 향상
 
@@ -97,4 +97,3 @@ FP16: 매우 큼 (32B 모델은 단일 GPU 불가)
 -------------
 본 프로젝트는 연구/학습 목적의 예제 코드입니다.
 실제 서비스에 사용할 경우 모델 라이선스를 반드시 확인하세요.
-
