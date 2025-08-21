@@ -87,7 +87,7 @@ max_new_tokens: 답변 최대 길이 설정
 ##### 2. 웹 브라우저 접속
     http://localhost:7860
 
-##### 💻 Code Overview
+##### 💻 Code Overview [chat_exaone.py]
     import gradio as gr
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
     import torch
