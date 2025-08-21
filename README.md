@@ -21,12 +21,19 @@
 ## ✅ Requirements
 ---------------------
 GPU: NVIDIA A100 (80GB)
+
 OS: Ubuntu 18.04
+
 Python: 3.10 (conda env)
+
 PyTorch: 2.1.2+cu121
+
 CUDA: 12.1
+
 Transformers: 4.44.0
+
 BitsAndBytes: 최신 버전
+
 Model: EXAONE-4.0-32B (8bit 또는 4bit 양자화로 실행)
 
 ## 🚀 Features
