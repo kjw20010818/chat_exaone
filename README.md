@@ -88,31 +88,30 @@ max_new_tokens: 답변 최대 길이 설정
     http://localhost:7860
 
 ##### 💻 Code Overview
-import gradio as gr
-from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
-import torch
+    import gradio as gr
+    from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
+    import torch
 
-# 모델 경로
-model_id = "LGAI-EXAONE/EXAONE-4.0-32B"
+    # 모델 경로
+    model_id = "LGAI-EXAONE/EXAONE-4.0-32B"
 
-print("🔄 모델 로드 중... (시간이 걸릴 수 있습니다)")
-tokenizer = AutoTokenizer.from_pretrained(model_id)
+    print("🔄 모델 로드 중... (시간이 걸릴 수 있습니다)")
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-# 양자화 설정 (8bit → 4bit로도 변경 가능)
-bnb_config = BitsAndBytesConfig(
-    load_in_8bit=True,      # VRAM 여유 없으면 load_in_4bit=True 로 변경
-    llm_int8_threshold=6.0
-)
+    # 양자화 설정 (8bit → 4bit로도 변경 가능)
+    bnb_config = BitsAndBytesConfig(
+        load_in_8bit=True,      # VRAM 여유 없으면 load_in_4bit=True 로 변경
+        llm_int8_threshold=6.0
+    )
 
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    device_map="auto",
-    torch_dtype=torch.float16,   # A100이니 fp16 권장
-    quantization_config=bnb_config
-)
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        device_map="auto",
+        torch_dtype=torch.float16,   # A100이니 fp16 권장
+        quantization_config=bnb_config
+    )
 
-# 대화 기록 저장
-
+    # 대화 기록 저장
     chat_history = []
 
     def chat_fn(message, history):
@@ -147,6 +146,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
     demo = gr.ChatInterface(fn=chat_fn)
     demo.launch(server_name="0.0.0.0", server_port=7860)
+
 
 ## ⚖️ Notes
 ---------
